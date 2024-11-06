@@ -25,6 +25,29 @@
             flex-direction: column;
             gap: 20px;
         }
+                /* 반응형 스타일 */
+        @media (max-width: 768px) {
+            .calendar-container {
+                width: 100%;
+                gap: 20px;
+            }
+
+            .days-header, .calendar-days, .mission-calendar-days {
+                grid-template-columns: repeat(7, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            /* 모바일 화면에서 날짜 박스를 작게 표시 */
+            .day {
+                width: 28px;
+                height: 28px;
+                font-size: 0.75em;
+            }
+            .days-header div {
+                font-size: 0.75em;
+            }
+        }
         
         /* 출석체크 및 미션 달력 */
         .attendance-calendar-container, .mission-calendar-container {
